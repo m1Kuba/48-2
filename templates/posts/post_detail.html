@@ -1,0 +1,16 @@
+{% extends "main.html" %}
+{% block content %}
+<div class="card" style="width: 18rem; margin: 1.5%;">
+  {% if post.image %}
+  <img src="{{post.image.url}}" class="card-img-top" alt="...">
+  {% else %}
+  <img src="/placeholder.png" class="card-img-top" alt="...">
+  {% endif %}
+    <div class="card-body">
+      <h5 class="card-title">{{post.title}}</h5>
+      <p class="card-text">{{post.description}}</p>
+      <p class="card-text">{{post.rate}}</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+</div>
+{% endblock %}
