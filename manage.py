@@ -20,3 +20,21 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+# <div style="display: flex; justify-content: center; margin-bottom: 20px; margin-top: 20px;">
+#     {% for i in max_pages %}
+#         <a href="?page={{ i }}{% if request.GET.search %}&search={{ request.GET.search }}{% endif %}{% if request.GET.category %}&category={{ request.GET.category }}{% endif %}{% if request.GET.ordering %}&ordering={{ request.GET.ordering }}{% endif %}" class="btn btn-primary">{{ i }}</a>
+#     {% endfor %}
+# </div>
+
+
+# <div style="display: flex; justify-content: center; margin-bottom: 20px; margin-top: 20px;">
+#     {% for i in max_pages %}
+#     {% if request.GET%}
+#         <a href="{{request.get_full_path}}&page={{i}}" class="btn btn-primary">{{i}}</a>
+#     {% else %}
+#         <a href="/posts/?page" class="btn btn-primary">{{i}}</a>
+#     {% endif %}
+#     {% endfor %}
+# </div>
